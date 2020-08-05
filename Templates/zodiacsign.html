@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}What is your Zodiac Sign?{% endblock %}
+{% block content %}
+{% block body %}{% endblock %}
+<style>
+    body {padding-top: 25px;}
+</style>
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-1 text-center"></div>
+          <div class="col-10 text-center">
+<!--              <img src="{{ zodiacSignImage }}">-->
+              <h1 class="font-weight-semi-bold">Your Zodiac Sign is {{zodiacsign}}</h1>
+              <hr class="my-4">
+              <p class="lead">{{description}}</p>
+          </div>
+          <div class="col-1 text-center"></div>
+        </div>
+      </div>
+{% endblock %}

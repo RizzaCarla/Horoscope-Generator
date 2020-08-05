@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}What is your Zodiac Sign?{% endblock %}
+{% block content %}
+<style>
+    body {padding-top: 25px;}
+</style>
+  <div class="container-fluid">
+    <div class="row welcome text-center">
+      <div class="col-12 text-center">
+          <h1 class="font-weight-semi-bold">Find your Zodiac Sign!</h1>
+          <hr class="my-4">
+      </div>
+      <div class="col-12 text-center">
+          <p class="lead">Please enter your Birthday.</p>
+          {% block body %}
+            {% if error %}
+                <p style="color:red" class=error><strong>Error:</strong> {{ error }}
+            {% endif %}
+          {% endblock %}
+          <form action="#" method="POST">
+            <p>Birth Month</p>
+            <p><input type = "text" name = "month_input"></p>
+            <p>Birth Date</p>
+            <p><input type = "text" name = "date_input"></p>
+            <p><input type = "submit" name="Submit" value = "Submit"></p>
+          </form>
+       </div>
+    </div>
+  </div>
+{% endblock %}
